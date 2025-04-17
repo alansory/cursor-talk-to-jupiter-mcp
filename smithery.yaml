@@ -1,0 +1,8 @@
+startCommand:
+  type: stdio
+  configSchema: {}
+  commandFunction: |
+    (config) => ({
+      command: 'bunx',
+      args: ['cursor-talk-to-jupiter-mcp']
+    })

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "TalkToJupiterMCP": {
+      "command": "bunx",
+      "args": ["cursor-talk-to-jupiter-mcp@latest"]
+    }
+  },
+  "mcp.logLevel": "debug"
+}

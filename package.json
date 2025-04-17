@@ -1,0 +1,42 @@
+{
+  "name": "cursor-talk-to-jupiter-mcp",
+  "version": "1.0.2",
+  "type": "module",
+  "description": "MCP server to integrate Jupiter Exchange with Cursor IDE for token swaps, price quotes, profit/loss calculation, and CSV export on Solana",
+  "module": "dist/server.js",
+  "main": "dist/server.js",
+  "bin": {
+    "cursor-talk-to-jupiter-mcp": "dist/server.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "inspect": "pnpm inspect",
+    "start": "bun run dist/server.js",
+    "socket": "bun run src/socket.ts",
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "dev": "bun run build:watch",
+    "pub:release": "bun run build && npm publish"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "@solana/web3.js": "^1.95.3",
+    "axios": "^1.7.7",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.5",
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.12",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  }
+}
